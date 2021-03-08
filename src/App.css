@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+html,body, #root,.room{
+  height: 100%;
+  margin: 0;
+}
+
+.Bright{
+  background-color: black;
+  color: antiquewhite;
+}
+.Dark{
+  background-color: red;
+  color: black;
+}

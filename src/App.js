@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
 
 function App() {
+
+  // const [state, setstate] = useState('red');
+
+  // function change() {
+  //   setstate(state === 'red' ? 'blue' : 'red')
+  // }
+  const [value, setValue] = useState(true);
+
+  const birthnes = value ? "Bright" : "Dark"
+
+  function change() {
+    setValue((prev) => !prev)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`room ${birthnes}`}>
+      <div>This Room is {(value === true) ? 'Bright' : 'Dark'}</div>
+      <button onClick={change}>Change</button>
     </div>
   );
 }
